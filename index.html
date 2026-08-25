@@ -4,34 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pooja Sawant — DevOps Engineer | Cloud | SRE</title>
-<meta name="description" content="DevOps Engineer with ~1 year of production experience. AWS, Docker, CI/CD, Prometheus, Terraform. Open to DevOps, Cloud, and SRE roles in Pune, Bangalore, Hyderabad.">
+<meta name="description" content="DevOps Engineer with ~1 year of production experience. AWS, Docker, CI/CD, Prometheus, Terraform, GCP. Open to DevOps, Cloud, and SRE roles in Pune, Bangalore, Hyderabad.">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Clash+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#04050a;--bg2:#080b12;--panel:rgba(10,14,25,0.9);
-  --border:rgba(0,210,255,0.12);--border2:rgba(0,210,255,0.28);
-  --cyan:#00d2ff;--cyan2:#00ff9d;--amber:#ffb703;--purple:#a855f7;
-  --text:#e8eaf6;--muted:rgba(232,234,246,0.48);
-  --mono:'IBM Plex Mono',monospace;--display:'Clash Display','IBM Plex Mono',monospace;
-}
+:root{--bg:#04050a;--bg2:#080b12;--panel:rgba(10,14,25,0.9);--border:rgba(0,210,255,0.12);--border2:rgba(0,210,255,0.28);--cyan:#00d2ff;--cyan2:#00ff9d;--amber:#ffb703;--purple:#a855f7;--text:#e8eaf6;--muted:rgba(232,234,246,0.48);--mono:'IBM Plex Mono',monospace;--display:'Clash Display','IBM Plex Mono',monospace}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--mono);overflow-x:hidden;cursor:none;min-height:100vh}
 #bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.55}
-.grid-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:linear-gradient(rgba(0,210,255,0.035) 1px,transparent 1px),
-                   linear-gradient(90deg,rgba(0,210,255,0.035) 1px,transparent 1px);
-  background-size:48px 48px;animation:gridDrift 24s linear infinite}
+.grid-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(0,210,255,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,210,255,0.035) 1px,transparent 1px);background-size:48px 48px;animation:gridDrift 24s linear infinite}
 @keyframes gridDrift{0%{background-position:0 0}100%{background-position:48px 48px}}
-.scanlines{position:fixed;inset:0;z-index:1;pointer-events:none;
-  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.025) 2px,rgba(0,0,0,0.025) 4px)}
-
-/* CURSOR */
+.scanlines{position:fixed;inset:0;z-index:1;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.025) 2px,rgba(0,0,0,0.025) 4px)}
 #cur{position:fixed;z-index:9999;pointer-events:none;top:0;left:0}
 #cur-dot{width:6px;height:6px;background:var(--cyan);border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 10px var(--cyan),0 0 20px var(--cyan)}
 #cur-ring{position:fixed;z-index:9998;pointer-events:none;width:32px;height:32px;border:1px solid rgba(0,210,255,0.5);border-radius:50%;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s;top:0;left:0}
-
-/* LOADER */
 #page-loader{position:fixed;inset:0;z-index:9000;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;transition:opacity .6s ease,visibility .6s ease}
 #page-loader.done{opacity:0;visibility:hidden}
 .loader-text{font-size:11px;letter-spacing:.2em;color:var(--cyan);text-transform:uppercase}
@@ -39,8 +25,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--mono);overflow-x:h
 .loader-bar{height:100%;background:linear-gradient(90deg,var(--cyan),var(--cyan2));box-shadow:0 0 8px var(--cyan);width:0;animation:loadBar 1.4s cubic-bezier(.16,1,.3,1) forwards}
 @keyframes loadBar{to{width:100%}}
 .loader-pct{font-size:10px;color:var(--muted);letter-spacing:.15em}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:56px;border-bottom:1px solid var(--border);background:rgba(4,5,10,0.94);backdrop-filter:blur(20px);transform:translateY(-100%);animation:slideDown .6s ease .9s forwards}
 @keyframes slideDown{to{transform:translateY(0)}}
 .nav-id{font-size:11px;letter-spacing:.2em;color:var(--cyan);display:flex;align-items:center;gap:10px}
@@ -49,15 +33,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;position:relative;padding-bottom:2px}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--cyan);transition:width .3s}
-.nav-links a:hover{color:var(--cyan)}
-.nav-links a:hover::after{width:100%}
+.nav-links a:hover{color:var(--cyan)}.nav-links a:hover::after{width:100%}
 .nav-right{display:flex;align-items:center;gap:1.5rem}
 .nav-status{font-size:10px;color:var(--muted);display:flex;align-items:center;gap:8px}
 .nav-status span{color:var(--cyan2)}
 .nav-resume{font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border:1px solid rgba(0,210,255,0.4);color:var(--cyan);text-decoration:none;transition:all .2s}
 .nav-resume:hover{background:rgba(0,210,255,0.1);box-shadow:0 0 16px rgba(0,210,255,0.2)}
-
-/* HERO */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 460px;gap:3rem;align-items:center;padding:80px 3rem 3rem;position:relative;z-index:10}
 .hero-left{max-width:660px}
 .sys-path{font-size:10px;letter-spacing:.15em;color:var(--muted);margin-bottom:2rem;display:flex;align-items:center;gap:8px;opacity:0;animation:fadeUp .5s ease 1.1s forwards}
@@ -68,7 +49,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 @keyframes glitchIn{0%{opacity:0;transform:translateX(-8px) skewX(-4deg);filter:blur(4px)}40%{opacity:1;transform:translateX(3px) skewX(1deg)}100%{opacity:1;transform:none;filter:none}}
 .hero-role{font-size:13px;letter-spacing:.08em;color:var(--cyan);margin-bottom:2.5rem;display:flex;align-items:center;gap:12px;opacity:0;animation:fadeUp .5s ease 1.5s forwards}
 .hero-role::before{content:'//';color:rgba(0,210,255,.3)}
-/* IMPROVED: honest, specific, no "architect" overclaiming */
 .hero-desc{font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:2.5rem;max-width:520px;opacity:0;animation:fadeUp .5s ease 1.65s forwards}
 .hero-desc em{color:var(--cyan2);font-style:normal}
 .hero-metrics{display:flex;gap:2.5rem;margin-bottom:3rem;opacity:0;animation:fadeUp .5s ease 1.8s forwards}
@@ -79,43 +59,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .5s ease 1.95s forwards}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .btn{font-family:var(--mono);font-size:11px;letter-spacing:.12em;padding:12px 26px;text-decoration:none;text-transform:uppercase;transition:all .25s;display:inline-flex;align-items:center;gap:8px;position:relative;overflow:hidden}
-.btn-glow{background:transparent;border:1px solid var(--cyan);color:var(--cyan)}
-.btn-glow:hover{box-shadow:0 0 28px rgba(0,210,255,.3);transform:translateY(-2px);background:rgba(0,210,255,.06)}
-.btn-solid{background:rgba(0,210,255,.08);border:1px solid rgba(0,210,255,.28);color:var(--text)}
-.btn-solid:hover{background:rgba(0,210,255,.16);transform:translateY(-2px)}
-/* NEW: resume download button */
-.btn-resume{background:rgba(0,255,157,.08);border:1px solid rgba(0,255,157,.35);color:var(--cyan2)}
-.btn-resume:hover{background:rgba(0,255,157,.16);transform:translateY(-2px);box-shadow:0 0 24px rgba(0,255,157,.2)}
+.btn-glow{background:transparent;border:1px solid var(--cyan);color:var(--cyan)}.btn-glow:hover{box-shadow:0 0 28px rgba(0,210,255,.3);transform:translateY(-2px);background:rgba(0,210,255,.06)}
+.btn-solid{background:rgba(0,210,255,.08);border:1px solid rgba(0,210,255,.28);color:var(--text)}.btn-solid:hover{background:rgba(0,210,255,.16);transform:translateY(-2px)}
+.btn-resume{background:rgba(0,255,157,.08);border:1px solid rgba(0,255,157,.35);color:var(--cyan2)}.btn-resume:hover{background:rgba(0,255,157,.16);transform:translateY(-2px);box-shadow:0 0 24px rgba(0,255,157,.2)}
 .hero-right{position:relative;z-index:10;opacity:0;animation:fadeLeft .7s ease 1.4s forwards}
 @keyframes fadeLeft{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
 .terminal-window{background:var(--panel);border:1px solid var(--border2);border-radius:8px;overflow:hidden;box-shadow:0 0 80px rgba(0,210,255,.07),0 40px 80px rgba(0,0,0,.6)}
 .terminal-window:hover{box-shadow:0 0 110px rgba(0,210,255,.13),0 40px 80px rgba(0,0,0,.6)}
 .t-bar{background:rgba(0,210,255,.05);border-bottom:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;gap:8px}
-.t-dot{width:11px;height:11px;border-radius:50%}
-.t-dot.r{background:#ff5f57}.t-dot.y{background:#ffbd2e}.t-dot.g{background:#28ca41}
+.t-dot{width:11px;height:11px;border-radius:50%}.t-dot.r{background:#ff5f57}.t-dot.y{background:#ffbd2e}.t-dot.g{background:#28ca41}
 .t-title{font-size:10px;color:var(--muted);margin-left:8px;letter-spacing:.1em;flex:1}
 .t-badge{font-size:9px;padding:2px 8px;background:rgba(0,255,157,.1);border:1px solid rgba(0,255,157,.2);color:var(--cyan2);letter-spacing:.1em}
 .t-body{padding:1.25rem 1.5rem;font-size:12px;line-height:2;height:400px;overflow-y:auto}
-.t-body::-webkit-scrollbar{width:4px}
-.t-body::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.t-body::-webkit-scrollbar{width:4px}.t-body::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
 .t-line{display:flex;gap:10px;animation:termLine .12s ease forwards;opacity:0}
 @keyframes termLine{from{opacity:0;transform:translateX(-4px)}to{opacity:1;transform:none}}
 .t-line .p{color:var(--cyan2);flex-shrink:0}.t-line .c{color:var(--text)}.t-line .o{color:var(--muted)}.t-line .ok{color:var(--cyan2)}.t-line .hi{color:var(--cyan)}.t-line .warn{color:var(--amber)}
 .t-cursor{display:inline-block;width:8px;height:14px;background:var(--cyan);animation:blink .8s infinite;vertical-align:text-bottom;margin-left:2px}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
-
-/* SECTIONS */
 .section{padding:6rem 3rem;position:relative;z-index:10}
 .section-header{display:flex;align-items:flex-end;gap:2rem;margin-bottom:3.5rem;border-bottom:1px solid var(--border);padding-bottom:1.5rem}
 .sec-num{font-size:10px;color:rgba(0,210,255,.3);letter-spacing:.2em}
 .sec-title{font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);font-weight:700;letter-spacing:-.02em;line-height:1}
 .sec-comment{font-size:11px;color:var(--muted);letter-spacing:.1em;padding-bottom:4px}
-
-/* STATUS */
 #status{padding:4rem 3rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:10}
 .status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
-.status-item{background:var(--bg);padding:1.5rem;transition:background .2s}
-.status-item:hover{background:var(--bg2)}
+.status-item{background:var(--bg);padding:1.5rem;transition:background .2s}.status-item:hover{background:var(--bg2)}
 .si-name{font-size:10px;color:var(--muted);letter-spacing:.1em;margin-bottom:.5rem}
 .si-val{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--cyan);margin-bottom:.25rem}
 .si-sub{font-size:9px;color:var(--muted);letter-spacing:.08em}
@@ -126,14 +95,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .si-fill.p{background:var(--purple);box-shadow:0 0 6px var(--purple)}
 .si-fill.a{background:var(--amber);box-shadow:0 0 6px var(--amber)}
 .status-item.visible .si-fill{transform:scaleX(1)}
-
-/* SKILLS */
 #skills{background:var(--bg2)}
 .skills-matrix{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);background:var(--border)}
 .skill-block{background:var(--bg);padding:2rem;position:relative;overflow:hidden;transition:background .25s,transform .25s,box-shadow .25s}
 .skill-block::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--cyan),var(--cyan2));transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.skill-block:hover{background:var(--bg2);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,210,255,.08)}
-.skill-block:hover::before{transform:scaleX(1)}
+.skill-block:hover{background:var(--bg2);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,210,255,.08)}.skill-block:hover::before{transform:scaleX(1)}
 .sk-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,210,255,.4);margin-bottom:.75rem}
 .sk-name{font-family:var(--display);font-size:1.15rem;font-weight:600;margin-bottom:.5rem;color:var(--text)}
 .sk-bar-wrap{height:2px;background:rgba(0,210,255,.1);margin-bottom:.75rem;overflow:hidden}
@@ -143,14 +109,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sk-chips{display:flex;flex-wrap:wrap;gap:5px}
 .chip{font-size:9px;padding:3px 8px;letter-spacing:.08em;background:rgba(0,210,255,.05);border:1px solid var(--border);color:var(--muted);transition:all .2s}
 .skill-block:hover .chip{border-color:rgba(0,210,255,.25);color:rgba(232,234,246,.7);background:rgba(0,210,255,.09)}
-
-/* EXPERIENCE */
 .exp-timeline{display:flex;flex-direction:column}
 .exp-entry{display:grid;grid-template-columns:1fr 2fr;gap:0;border-top:1px solid var(--border);transition:background .2s}
 .exp-entry:hover{background:rgba(0,210,255,.02)}
 .exp-left{padding:3rem 3rem 3rem 0;border-right:1px solid var(--border)}
 .exp-right{padding:3rem 0 3rem 3rem}
 .exp-tag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(0,255,157,.25);color:var(--cyan2);background:rgba(0,255,157,.06);display:inline-block;margin-bottom:1rem}
+.exp-tag.dim{border-color:rgba(0,210,255,.18);color:var(--muted);background:transparent}
 .exp-date{font-size:10px;color:var(--muted);letter-spacing:.1em;margin-bottom:.5rem}
 .exp-co{font-size:18px;font-weight:600;font-family:var(--display);color:var(--text)}
 .exp-loc{font-size:10px;color:var(--muted);margin-top:4px;letter-spacing:.08em}
@@ -164,25 +129,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .exp-tags{display:flex;flex-wrap:wrap;gap:6px}
 .etag{font-size:9px;padding:3px 9px;letter-spacing:.08em;background:rgba(0,210,255,.05);border:1px solid var(--border);color:var(--muted);transition:border-color .2s,color .2s}
 .exp-entry:hover .etag{border-color:rgba(0,210,255,.2);color:rgba(232,234,246,.6)}
-
-/* PROJECTS */
 #projects{background:var(--bg2)}
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;border:1px solid var(--border);background:var(--border)}
 .proj-card{background:var(--bg);padding:2.5rem;position:relative;overflow:hidden;transition:background .25s,transform .25s,box-shadow .25s}
 .proj-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--cyan2));transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.proj-card:hover{background:rgba(0,210,255,.03);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,210,255,.08)}
-.proj-card:hover::after{transform:scaleX(1)}
+.proj-card:hover{background:rgba(0,210,255,.03);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,210,255,.08)}.proj-card:hover::after{transform:scaleX(1)}
 .proj-id{font-size:9px;letter-spacing:.2em;color:rgba(0,210,255,.3);margin-bottom:1.5rem}
 .proj-name{font-family:var(--display);font-size:1.25rem;font-weight:700;margin-bottom:.75rem;line-height:1.3}
 .proj-type{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);margin-bottom:1rem}
 .proj-desc{font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
 .proj-stack{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1.5rem}
 .proj-footer{display:flex;align-items:center;justify-content:space-between}
-.proj-link{font-size:10px;color:var(--cyan);text-decoration:none;letter-spacing:.1em;display:flex;align-items:center;gap:6px;transition:gap .2s}
-.proj-link:hover{gap:10px}
+.proj-link{font-size:10px;color:var(--cyan);text-decoration:none;letter-spacing:.1em;display:flex;align-items:center;gap:6px;transition:gap .2s}.proj-link:hover{gap:10px}
 .proj-status{font-size:9px;padding:3px 8px;background:rgba(0,255,157,.08);border:1px solid rgba(0,255,157,.2);color:var(--cyan2);letter-spacing:.1em}
-
-/* CONTACT */
 #contact{min-height:65vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:6rem 3rem}
 .contact-bg-text{position:absolute;font-family:var(--display);font-size:clamp(8rem,20vw,18rem);font-weight:700;color:transparent;-webkit-text-stroke:1px rgba(0,210,255,.05);letter-spacing:-.05em;pointer-events:none;user-select:none;white-space:nowrap;animation:floatText 8s ease-in-out infinite}
 @keyframes floatText{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -193,23 +152,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .contact-grid{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem;position:relative;z-index:2}
 .c-link{font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:12px 24px;border:1px solid var(--border2);color:var(--muted);text-decoration:none;transition:all .25s;display:flex;align-items:center;gap:8px}
 .c-link:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
-.c-link.primary{background:rgba(0,210,255,.07);border-color:var(--cyan);color:var(--cyan)}
-.c-link.primary:hover{background:rgba(0,210,255,.16)}
-
-/* FOOTER */
+.c-link.primary{background:rgba(0,210,255,.07);border-color:var(--cyan);color:var(--cyan)}.c-link.primary:hover{background:rgba(0,210,255,.16)}
 footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:10}
 .footer-l{font-size:10px;color:var(--muted);letter-spacing:.1em}
-.footer-r{font-size:10px;color:var(--muted)}
-.footer-r span{color:var(--cyan2)}
-
-/* SCROLL REVEAL */
+.footer-r{font-size:10px;color:var(--muted)}.footer-r span{color:var(--cyan2)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
 .reveal.visible{opacity:1;transform:none}
-.reveal:nth-child(2){transition-delay:.07s}
-.reveal:nth-child(3){transition-delay:.14s}
-.reveal:nth-child(4){transition-delay:.21s}
+.reveal:nth-child(2){transition-delay:.07s}.reveal:nth-child(3){transition-delay:.14s}.reveal:nth-child(4){transition-delay:.21s}
 .magnetic{transition:transform .3s cubic-bezier(.16,1,.3,1)}
-
 @media(max-width:900px){
   nav{padding:0 1.5rem}.nav-links{display:none}.nav-resume{display:none}
   #hero{grid-template-columns:1fr;padding:80px 1.5rem 3rem}.hero-right{display:none}
@@ -222,20 +172,17 @@ footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;align
 </style>
 </head>
 <body>
-
 <div id="page-loader">
   <div class="loader-text" id="lpt">INITIALISING SYSTEMS</div>
   <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
   <div class="loader-pct" id="lpn">0%</div>
 </div>
-
 <canvas id="bg-canvas"></canvas>
 <div class="grid-overlay"></div>
 <div class="scanlines"></div>
 <div id="cur"><div id="cur-dot"></div></div>
 <div id="cur-ring"></div>
 
-<!-- NAV — added Resume Download button -->
 <nav>
   <div class="nav-id">POOJA.SAWANT / DEVOPS-ENGINEER</div>
   <ul class="nav-links">
@@ -246,44 +193,28 @@ footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;align
   </ul>
   <div class="nav-right">
     <div class="nav-status">STATUS <span>&#9679; OPEN TO WORK</span></div>
-    <a href="https://drive.google.com/file/d/1zIgQ6fp12VtnMwVENKZtU9JUlVQtO5Gr/view?usp=sharing" class="nav-resume" target="_blank">Resume ↗</a>
+    <a href="https://drive.google.com/file/d/1zIgQ6fp12VtnMwVENKZtU9JUlVQtO5Gr/view?usp=sharing" class="nav-resume" target="_blank">Resume &#8599;</a>
   </div>
 </nav>
 
-<!-- HERO — fixed: honest desc, correct location, no "architect" overclaim -->
 <section id="hero">
   <div class="hero-left">
-    <div class="sys-path">
-      <span class="sep">/</span>home<span class="sep">/</span>pooja<span class="sep">/</span>devops
-      <span style="color:var(--cyan);margin-left:8px">&#9632; LIVE</span>
-    </div>
-    <h1 class="hero-name">
-      <span class="glow">Pooja</span>
-      <span class="stroke">Sawant</span>
-    </h1>
+    <div class="sys-path"><span class="sep">/</span>home<span class="sep">/</span>pooja<span class="sep">/</span>devops <span style="color:var(--cyan);margin-left:8px">&#9632; LIVE</span></div>
+    <h1 class="hero-name"><span class="glow">Pooja</span><span class="stroke">Sawant</span></h1>
     <div class="hero-role">DevOps &amp; Cloud Engineer</div>
     <p class="hero-desc">
       I provision, deploy, and keep cloud infrastructure running.
-      <em>~1 year of production experience</em> at Team Pumpkin (Mumbai) —
-      working remotely from Pune managing
-      <em>AWS ECS, Docker, CI/CD pipelines, and Prometheus observability</em>
-      for <em>10+ live applications</em>.
-      Real deployments. Real incidents. Real on-call.
+      <em>~1 year of production experience</em> at Team Pumpkin —
+      managing <em>AWS ECS, Docker, CI/CD pipelines, Prometheus observability</em>
+      for <em>10+ live applications</em>. Also deployed
+      <em>production applications on GCP</em> (Cloud Run, Artifact Registry)
+      as freelance engagements. Real deployments. Real incidents. Real on-call.
       Open to <em>DevOps, Cloud, and SRE roles</em> across India.
     </p>
     <div class="hero-metrics">
-      <div class="metric">
-        <div class="metric-val" id="cnt-apps">0</div>
-        <div class="metric-label">Production apps</div>
-      </div>
-      <div class="metric">
-        <div class="metric-val green" id="cnt-uptime">0%</div>
-        <div class="metric-label">Uptime maintained</div>
-      </div>
-      <div class="metric">
-        <div class="metric-val" id="cnt-aws">0</div>
-        <div class="metric-label">AWS services daily</div>
-      </div>
+      <div class="metric"><div class="metric-val" id="cnt-apps">0</div><div class="metric-label">Production apps</div></div>
+      <div class="metric"><div class="metric-val green" id="cnt-uptime">0%</div><div class="metric-label">Uptime maintained</div></div>
+      <div class="metric"><div class="metric-val" id="cnt-aws">0</div><div class="metric-label">Cloud services daily</div></div>
     </div>
     <div class="hero-btns">
       <a href="#projects" class="btn btn-glow magnetic">View work &#8594;</a>
@@ -293,169 +224,129 @@ footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;align
   </div>
   <div class="hero-right">
     <div class="terminal-window">
-      <div class="t-bar">
-        <div class="t-dot r"></div><div class="t-dot y"></div><div class="t-dot g"></div>
-        <span class="t-title">pooja@prod-infra-01:~$</span>
-        <span class="t-badge">LIVE</span>
-      </div>
+      <div class="t-bar"><div class="t-dot r"></div><div class="t-dot y"></div><div class="t-dot g"></div><span class="t-title">pooja@prod-infra-01:~$</span><span class="t-badge">LIVE</span></div>
       <div class="t-body" id="terminal-body"></div>
     </div>
   </div>
 </section>
 
-<!-- STATUS DASHBOARD — fixed labels, honest Terraform level -->
 <div id="status">
   <div style="font-size:9px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:1.5rem">// infrastructure.status &#8212; current operational snapshot</div>
   <div class="status-grid">
-    <div class="status-item reveal">
-      <div class="si-name">PRODUCTION UPTIME</div><div class="si-val">99.9%</div>
-      <div class="si-sub">10+ apps &middot; Jun 2025 &ndash; present</div>
-      <div class="si-bar"><div class="si-fill c" style="--w:.999"></div></div>
-    </div>
-    <div class="status-item reveal">
-      <div class="si-name">AWS SERVICES</div><div class="si-val">10+</div>
-      <div class="si-sub">ECS &middot; VPC &middot; ALB &middot; IAM &middot; Route53 &middot; Lambda</div>
-      <div class="si-bar"><div class="si-fill g" style="--w:.85"></div></div>
-    </div>
-    <div class="status-item reveal">
-      <div class="si-name">CI/CD PIPELINES</div><div class="si-val">Active</div>
-      <div class="si-sub">Jenkins &middot; GitHub Actions &middot; ECS deploy</div>
-      <div class="si-bar"><div class="si-fill p" style="--w:.9"></div></div>
-    </div>
-    <div class="status-item reveal">
-      <div class="si-name">OBSERVABILITY</div><div class="si-val">Online</div>
-      <div class="si-sub">Prometheus &middot; Grafana &middot; Alertmanager</div>
-      <div class="si-bar"><div class="si-fill a" style="--w:.95"></div></div>
-    </div>
-    <div class="status-item reveal">
-      <div class="si-name">INFRASTRUCTURE AS CODE</div><div class="si-val">In Use</div>
-      <div class="si-sub">Terraform &middot; intermediate level</div>
-      <div class="si-bar"><div class="si-fill c" style="--w:.55"></div></div>
-    </div>
-    <div class="status-item reveal">
-      <div class="si-name">KUBERNETES</div><div class="si-val">Learning</div>
-      <div class="si-sub">EKS &middot; actively on roadmap</div>
-      <div class="si-bar"><div class="si-fill g" style="--w:.22"></div></div>
-    </div>
+    <div class="status-item reveal"><div class="si-name">PRODUCTION UPTIME</div><div class="si-val">99.9%</div><div class="si-sub">10+ apps &middot; Jun 2025 &ndash; present</div><div class="si-bar"><div class="si-fill c" style="--w:.999"></div></div></div>
+    <div class="status-item reveal"><div class="si-name">AWS SERVICES</div><div class="si-val">12+</div><div class="si-sub">ECS &middot; Lambda &middot; CloudFront &middot; EventBridge</div><div class="si-bar"><div class="si-fill g" style="--w:.88"></div></div></div>
+    <div class="status-item reveal"><div class="si-name">CI/CD PIPELINES</div><div class="si-val">Active</div><div class="si-sub">Jenkins &middot; GitHub Actions &middot; ECS deploy</div><div class="si-bar"><div class="si-fill p" style="--w:.9"></div></div></div>
+    <div class="status-item reveal"><div class="si-name">OBSERVABILITY</div><div class="si-val">Online</div><div class="si-sub">Prometheus &middot; Grafana &middot; Alertmanager</div><div class="si-bar"><div class="si-fill a" style="--w:.95"></div></div></div>
+    <div class="status-item reveal"><div class="si-name">MULTI-CLOUD</div><div class="si-val">AWS + GCP</div><div class="si-sub">Cloud Run &middot; Artifact Registry &middot; Terraform</div><div class="si-bar"><div class="si-fill c" style="--w:.65"></div></div></div>
+    <div class="status-item reveal"><div class="si-name">KUBERNETES</div><div class="si-val">Learning</div><div class="si-sub">EKS &middot; actively on roadmap</div><div class="si-bar"><div class="si-fill g" style="--w:.22"></div></div></div>
   </div>
 </div>
 
-<!-- SKILLS — fixed: removed EC2/Apache/SSH Hardening/Firewall, added Python/Lambda -->
 <section id="skills" class="section">
   <div class="section-header reveal">
     <div><div class="sec-num">// 01</div><h2 class="sec-title">Technical<br>Stack</h2></div>
     <div class="sec-comment">/* tools used in production */</div>
   </div>
   <div class="skills-matrix">
-    <div class="skill-block reveal" style="--w:.92">
-      <div class="sk-label">Cloud Platform</div>
-      <div class="sk-name">Amazon Web Services</div>
+    <div class="skill-block reveal" style="--w:.93">
+      <div class="sk-label">Cloud Platform — AWS</div><div class="sk-name">Amazon Web Services</div>
       <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
-      <div class="sk-pct">10+ services &middot; daily production use</div>
-      <div class="sk-chips">
-        <span class="chip">ECS</span><span class="chip">ECR</span><span class="chip">VPC</span>
-        <span class="chip">ALB</span><span class="chip">ACM</span><span class="chip">Route53</span>
-        <span class="chip">CloudWatch</span><span class="chip">IAM</span><span class="chip">Lambda</span>
-      </div>
-    </div>
-    <div class="skill-block reveal" style="--w:.9">
-      <div class="sk-label">Containers &amp; Deployment</div>
-      <div class="sk-name">Docker &amp; Compose</div>
-      <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
-      <div class="sk-pct">Multi-service stacks &middot; production deployments</div>
-      <div class="sk-chips">
-        <span class="chip">Docker</span><span class="chip">Dockerfile</span>
-        <span class="chip">Docker Compose</span><span class="chip">Docker Hub</span>
-        <span class="chip">ECS Fargate</span><span class="chip">cAdvisor</span>
-      </div>
-    </div>
-    <div class="skill-block reveal" style="--w:.88">
-      <div class="sk-label">CI/CD &amp; Release</div>
-      <div class="sk-name">Pipelines &amp; Automation</div>
-      <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
-      <div class="sk-pct">Automated build &middot; test &middot; deploy &middot; verify</div>
-      <div class="sk-chips">
-        <span class="chip">Jenkins</span><span class="chip">GitHub Actions</span>
-        <span class="chip">Webhooks</span><span class="chip">Docker Hub</span><span class="chip">Git</span>
-      </div>
-    </div>
-    <div class="skill-block reveal" style="--w:.88">
-      <div class="sk-label">Monitoring &amp; Observability</div>
-      <div class="sk-name">Metrics &amp; Alerting</div>
-      <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
-      <div class="sk-pct">Scrape config &middot; alerting rules &middot; dashboards</div>
-      <div class="sk-chips">
-        <span class="chip">Prometheus</span><span class="chip">Grafana</span>
-        <span class="chip">Alertmanager</span><span class="chip">Node Exporter</span>
-        <span class="chip">Blackbox Exporter</span><span class="chip">cAdvisor</span>
-      </div>
-    </div>
-    <div class="skill-block reveal" style="--w:.85">
-      <div class="sk-label">Linux &amp; Web Servers</div>
-      <div class="sk-name">Systems &amp; Networking</div>
-      <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
-      <div class="sk-pct">Admin &middot; troubleshooting &middot; incident response</div>
-      <div class="sk-chips">
-        <span class="chip">Ubuntu</span><span class="chip">Amazon Linux</span>
-        <span class="chip">Nginx</span><span class="chip">SSL/TLS</span>
-        <span class="chip">DNS</span><span class="chip">systemd</span>
-      </div>
+      <div class="sk-pct">12+ services &middot; daily production use</div>
+      <div class="sk-chips"><span class="chip">ECS</span><span class="chip">ECR</span><span class="chip">VPC</span><span class="chip">ALB</span><span class="chip">ACM</span><span class="chip">Route53</span><span class="chip">CloudWatch</span><span class="chip">IAM</span><span class="chip">Lambda</span><span class="chip">CloudFront</span><span class="chip">MediaConvert</span><span class="chip">EventBridge</span></div>
     </div>
     <div class="skill-block reveal" style="--w:.72">
-      <div class="sk-label">IaC, Scripting &amp; Data</div>
-      <div class="sk-name">Terraform &amp; Automation</div>
+      <div class="sk-label">Cloud Platform — GCP</div><div class="sk-name">Google Cloud Platform</div>
       <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
-      <!-- fixed: honest level, added Python/Lambda -->
-      <div class="sk-pct">Intermediate IaC &middot; scripting &middot; automation</div>
-      <div class="sk-chips">
-        <span class="chip">Terraform</span><span class="chip">Python</span>
-        <span class="chip">AWS Lambda</span><span class="chip">Bash</span>
-        <span class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">PostgreSQL</span>
-      </div>
+      <div class="sk-pct">Production freelance deployments</div>
+      <div class="sk-chips"><span class="chip">Cloud Run</span><span class="chip">Artifact Registry</span><span class="chip">VPC</span><span class="chip">IAM</span><span class="chip">Cloud Storage</span><span class="chip">Cloud Build</span></div>
+    </div>
+    <div class="skill-block reveal" style="--w:.9">
+      <div class="sk-label">Containers &amp; Deployment</div><div class="sk-name">Docker &amp; Compose</div>
+      <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
+      <div class="sk-pct">Multi-service stacks &middot; production deploys</div>
+      <div class="sk-chips"><span class="chip">Docker</span><span class="chip">Dockerfile</span><span class="chip">Docker Compose</span><span class="chip">Docker Hub</span><span class="chip">ECS Fargate</span><span class="chip">cAdvisor</span></div>
+    </div>
+    <div class="skill-block reveal" style="--w:.88">
+      <div class="sk-label">CI/CD &amp; Release</div><div class="sk-name">Pipelines &amp; Automation</div>
+      <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
+      <div class="sk-pct">Automated build &middot; test &middot; deploy &middot; verify</div>
+      <div class="sk-chips"><span class="chip">Jenkins</span><span class="chip">GitHub Actions</span><span class="chip">Webhooks</span><span class="chip">Docker Hub</span><span class="chip">Git</span></div>
+    </div>
+    <div class="skill-block reveal" style="--w:.88">
+      <div class="sk-label">Monitoring &amp; Observability</div><div class="sk-name">Metrics &amp; Alerting</div>
+      <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
+      <div class="sk-pct">Scrape config &middot; alerting rules &middot; dashboards</div>
+      <div class="sk-chips"><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Alertmanager</span><span class="chip">Node Exporter</span><span class="chip">Blackbox Exporter</span><span class="chip">cAdvisor</span></div>
+    </div>
+    <div class="skill-block reveal" style="--w:.75">
+      <div class="sk-label">IaC, Scripting &amp; Data</div><div class="sk-name">Terraform &amp; Automation</div>
+      <div class="sk-bar-wrap"><div class="sk-bar"></div></div>
+      <div class="sk-pct">IaC &middot; Python/Lambda &middot; Bash automation</div>
+      <div class="sk-chips"><span class="chip">Terraform</span><span class="chip">Python</span><span class="chip">AWS Lambda</span><span class="chip">Bash</span><span class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">PostgreSQL</span></div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE — fixed: merged role Jun 2025–Present, Pune not Mumbai, no "sole engineer" overclaim -->
 <section id="experience" class="section">
   <div class="section-header reveal">
     <div><div class="sec-num">// 02</div><h2 class="sec-title">Work<br>History</h2></div>
     <div class="sec-comment">/* where i've shipped */</div>
   </div>
   <div class="exp-timeline">
+
+    <!-- Team Pumpkin -->
     <div class="exp-entry reveal">
       <div class="exp-left">
         <div class="exp-tag">Full-Time &middot; Current</div>
         <div class="exp-date">JUN 2025 &mdash; PRESENT</div>
         <div class="exp-co">Team Pumpkin</div>
-        <div class="exp-loc">Mumbai, India Pune, India &middot; Hybrid &middot; Remote (based in Pune)</div>
+        <div class="exp-loc">Mumbai &middot; Remote from Pune</div>
       </div>
       <div class="exp-right">
         <div class="exp-role">DevOps Engineer</div>
-        <div class="exp-subtitle">AWS INFRASTRUCTURE &middot; CI/CD &middot; OBSERVABILITY</div>
-        <div class="exp-summary">~1 year of production experience at Team Pumpkin (Mumbai, working remotely from Pune), managing AWS infrastructure, CI/CD pipelines, and observability for 10+ live client applications. Including a ~6-week period of fully independent ownership of all DevOps operations during a team transition.</div>
+        <div class="exp-subtitle">AWS &middot; DOCKER &middot; CI/CD &middot; OBSERVABILITY &middot; SECURITY</div>
+        <div class="exp-summary">~1 year managing AWS infrastructure, CI/CD pipelines, and observability for 10+ live client applications. Resolved live security incidents, delivered cost savings, and owned all DevOps operations independently for ~6 weeks during a team transition.</div>
         <ul class="exp-list">
-          <li>Provision and maintain AWS infrastructure (ECS, ECR, VPC, ALB, ACM, Route53, IAM, CloudWatch) for 10+ production applications; Terraform configurations replaced manual provisioning steps</li>
-          <li>Build and operate CI/CD pipelines using Jenkins and GitHub Actions — automating Docker builds, ECR pushes, and ECS deployments to reduce release time and manual handoffs</li>
+          <li>Provision and maintain AWS infrastructure (ECS, ECR, VPC, ALB, NAT Gateway, ACM, Route53, IAM, CloudWatch) for 10+ production applications; Terraform configurations replaced manual provisioning</li>
+          <li>Build and operate CI/CD pipelines using Jenkins and GitHub Actions — automating Docker builds, ECR pushes, and ECS deployments to reduce release time and eliminate manual handoffs</li>
           <li>Deploy and maintain Prometheus, Grafana, Alertmanager, and cAdvisor with custom scrape jobs, alerting rules, and dashboards for full-stack observability</li>
-          <li>Write Python and Bash scripts for operational automation; implement AWS Lambda functions for scheduled jobs and event-driven alerting</li>
-          <li>Configure Nginx as reverse proxy with SSL/TLS via ACM; manage Route53 DNS across all client environments</li>
-          <li>Own production incident response — diagnose container crashes, memory spikes, and service outages using CloudWatch logs and Linux diagnostics</li>
-          <li>Solely owned all DevOps operations — infrastructure, deployments, monitoring, and incident response — for ~6 weeks during a team transition, with no other DevOps engineer available</li>
+          <li>Identified and resolved multiple live security incidents — unauthorised access and misconfigured security groups — by hardening IAM policies and restricting inbound rules</li>
+          <li>Reduced AWS infrastructure costs by rightsizing EC2/ECS instances and eliminating unused resources, contributing to the organisation's cost-cutting initiative</li>
+          <li>Implement AWS Lambda functions for scheduled AMI backups via EventBridge, MediaConvert jobs, and CloudFront cache management; write Python and Bash scripts for operational automation</li>
+          <li>Independently owned all infrastructure, deployments, monitoring, and incident response for ~6 weeks during a team transition with no other DevOps engineer available</li>
         </ul>
         <div class="exp-tags">
-          <span class="etag">AWS ECS</span><span class="etag">Terraform</span>
-          <span class="etag">Docker</span><span class="etag">Jenkins</span>
-          <span class="etag">GitHub Actions</span><span class="etag">Prometheus</span>
-          <span class="etag">Grafana</span><span class="etag">Python</span>
-          <span class="etag">Linux</span>
+          <span class="etag">AWS ECS</span><span class="etag">Terraform</span><span class="etag">Docker</span><span class="etag">Jenkins</span><span class="etag">GitHub Actions</span><span class="etag">Prometheus</span><span class="etag">Grafana</span><span class="etag">Lambda</span><span class="etag">Python</span><span class="etag">Linux</span>
         </div>
       </div>
     </div>
+
+    <!-- Freelance -->
+    <div class="exp-entry reveal">
+      <div class="exp-left">
+        <div class="exp-tag dim">Freelance</div>
+        <div class="exp-date">MAY 2026 &mdash; PRESENT</div>
+        <div class="exp-co">Independent</div>
+        <div class="exp-loc">Remote &middot; GCP &amp; Web Projects</div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">Cloud &amp; DevOps<br>Freelance Engineer</div>
+        <div class="exp-subtitle">GCP &middot; CLOUD RUN &middot; DOCKER &middot; NEXT.JS &middot; CMS</div>
+        <div class="exp-summary">Ongoing freelance engagements deploying production applications on GCP and setting up full web infrastructure for clients independently.</div>
+        <ul class="exp-list">
+          <li>Deployed production AI-based application on GCP Cloud Run with Docker; configured Artifact Registry for image management, VPC networking, and IAM roles with least-privilege access</li>
+          <li>Set up Next.js frontend with CMS integration for a client — full infrastructure setup, domain configuration, SSL, and deployment pipeline</li>
+          <li>Delivered both projects independently from initial setup through live production handoff</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="etag">GCP Cloud Run</span><span class="etag">Artifact Registry</span><span class="etag">Docker</span><span class="etag">Next.js</span><span class="etag">CMS</span><span class="etag">VPC</span><span class="etag">IAM</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- PROJECTS — fixed: direct repo links, honest descriptions -->
 <section id="projects" class="section">
   <div class="section-header reveal">
     <div><div class="sec-num">// 03</div><h2 class="sec-title">Projects</h2></div>
@@ -467,116 +358,95 @@ footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;align
       <div class="proj-id">PROJECT_01 / OBSERVABILITY</div>
       <div class="proj-type">Monitoring Stack</div>
       <div class="proj-name">DevOps Observability Platform</div>
-      <div class="proj-desc">6-service Docker Compose monitoring stack — Prometheus with custom scrape jobs and alerting rules, Grafana with provisioned dashboards, Blackbox Exporter for HTTP endpoint probing, cAdvisor for container metrics, Node Exporter for system metrics, and Jenkins. All services config-mounted with named volumes and restart policies.</div>
-      <div class="proj-stack">
-        <span class="chip">Prometheus</span><span class="chip">Grafana</span>
-        <span class="chip">Alertmanager</span><span class="chip">cAdvisor</span>
-        <span class="chip">Blackbox Exporter</span><span class="chip">Jenkins</span>
-        <span class="chip">Docker Compose</span>
-      </div>
-      <div class="proj-footer">
-        <a href="https://github.com/Pooja1030/devops-lab" target="_blank" rel="noopener" class="proj-link">github.com/Pooja1030/devops-lab &#8594;</a>
-        <span class="proj-status">COMPLETE</span>
-      </div>
+      <div class="proj-desc">6-service Docker Compose monitoring stack — Prometheus with custom scrape jobs and alerting rules, Grafana with provisioned dashboards, Blackbox Exporter for HTTP probing, cAdvisor for container metrics, Node Exporter for system metrics. All config-mounted with named volumes and restart policies.</div>
+      <div class="proj-stack"><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Alertmanager</span><span class="chip">cAdvisor</span><span class="chip">Blackbox Exporter</span><span class="chip">Jenkins</span><span class="chip">Docker Compose</span></div>
+      <div class="proj-footer"><a href="https://github.com/Pooja1030" target="_blank" rel="noopener" class="proj-link">GitHub &#8594;</a><span class="proj-status">COMPLETE</span></div>
     </div>
 
     <div class="proj-card reveal">
       <div class="proj-id">PROJECT_02 / CI/CD AUTOMATION</div>
       <div class="proj-type">Containerised App Pipeline</div>
       <div class="proj-name">MERN E-Commerce — CI/CD Pipeline</div>
-      <div class="proj-desc">5-service Docker Compose stack (React, Node.js, MongoDB, Nginx, admin panel). Jenkins declarative pipeline with three stages: Docker build, container redeploy, and health verification — triggered via GitHub webhook. Versioned images published to Docker Hub. Terraform for environment provisioning. Prometheus + Grafana for app monitoring.</div>
-      <div class="proj-stack">
-        <span class="chip">Jenkins</span><span class="chip">Docker Hub</span>
-        <span class="chip">Webhooks</span><span class="chip">Nginx</span>
-        <span class="chip">Terraform</span><span class="chip">Prometheus</span>
-        <span class="chip">Docker Compose</span>
-      </div>
-      <div class="proj-footer">
-        <a href="https://github.com/Pooja1030/Eccomerce-App" target="_blank" rel="noopener" class="proj-link">github.com/Pooja1030/Eccomerce-App &#8594;</a>
-        <span class="proj-status">COMPLETE</span>
-      </div>
+      <div class="proj-desc">5-service Docker Compose stack (React, Node.js, MongoDB, Nginx, admin panel). Jenkins declarative pipeline with build, redeploy, and health verification stages — triggered via GitHub webhook. Versioned images on Docker Hub. Terraform for environment provisioning. Prometheus + Grafana for monitoring.</div>
+      <div class="proj-stack"><span class="chip">Jenkins</span><span class="chip">Docker Hub</span><span class="chip">Webhooks</span><span class="chip">Nginx</span><span class="chip">Terraform</span><span class="chip">Prometheus</span><span class="chip">Docker Compose</span></div>
+      <div class="proj-footer"><a href="https://github.com/Pooja1030/Eccomerce-App" target="_blank" rel="noopener" class="proj-link">GitHub &#8594;</a><span class="proj-status">COMPLETE</span></div>
     </div>
 
     <div class="proj-card reveal">
       <div class="proj-id">PROJECT_03 / FULL DEVOPS</div>
       <div class="proj-type">Application DevOps Pipeline</div>
       <div class="proj-name">Clinic Management — DevOps Pipeline</div>
-      <div class="proj-desc">Full-stack clinic app (Next.js, Node.js, MongoDB) containerised across 4 Docker Compose services with inter-container networking and volume persistence. GitHub Actions CI/CD pipeline with repository secrets management. Debugged real Linux issues — file permission conflicts, Docker daemon socket errors, and Compose v1-to-v2 migration.</div>
-      <div class="proj-stack">
-        <span class="chip">Next.js</span><span class="chip">Node.js</span>
-        <span class="chip">MongoDB</span><span class="chip">Docker Compose</span>
-        <span class="chip">GitHub Actions</span><span class="chip">Linux</span>
-      </div>
-      <div class="proj-footer">
-        <a href="https://github.com/Pooja1030" target="_blank" rel="noopener" class="proj-link">github.com/Pooja1030 &#8594;</a>
-        <span class="proj-status">COMPLETE</span>
-      </div>
+      <div class="proj-desc">Full-stack clinic app (Next.js, Node.js, MongoDB) containerised across 4 Docker Compose services with inter-container networking and volume persistence. GitHub Actions CI/CD pipeline with secrets management. Debugged real Linux issues — file permission conflicts, Docker daemon socket errors, Compose v1-to-v2 migration.</div>
+      <div class="proj-stack"><span class="chip">Next.js</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Docker Compose</span><span class="chip">GitHub Actions</span><span class="chip">Linux</span></div>
+      <div class="proj-footer"><a href="https://github.com/Pooja1030" target="_blank" rel="noopener" class="proj-link">GitHub &#8594;</a><span class="proj-status">COMPLETE</span></div>
+    </div>
+
+    <div class="proj-card reveal" style="background:rgba(0,255,157,.01);border-top:1px solid rgba(0,255,157,.1)">
+      <div class="proj-id">PROJECT_04 / GCP &middot; FREELANCE</div>
+      <div class="proj-type" style="color:var(--cyan2)">Google Cloud Platform &middot; Production</div>
+      <div class="proj-name">AI Application — GCP Cloud Run</div>
+      <div class="proj-desc">Production deployment of an AI-based application on GCP for a freelance client. Containerised with Docker, deployed to Cloud Run, images versioned via Artifact Registry. VPC networking, IAM service accounts with least-privilege roles, environment secrets management. Delivered from zero GCP setup to live production independently.</div>
+      <div class="proj-stack"><span class="chip">GCP Cloud Run</span><span class="chip">Artifact Registry</span><span class="chip">Docker</span><span class="chip">VPC</span><span class="chip">IAM</span><span class="chip">Cloud Storage</span></div>
+      <div class="proj-footer"><span style="font-size:10px;color:var(--cyan2);letter-spacing:.1em">FREELANCE &middot; CLIENT PROJECT</span><span class="proj-status">DEPLOYED</span></div>
     </div>
 
     <div class="proj-card reveal" style="background:rgba(0,210,255,.015)">
-      <div class="proj-id">PROJECT_04 / IN PROGRESS</div>
+      <div class="proj-id">PROJECT_05 / IN PROGRESS</div>
       <div class="proj-type" style="color:var(--amber)">Terraform &middot; AWS &middot; IaC</div>
       <div class="proj-name">AWS Infrastructure — Terraform Modules</div>
       <div class="proj-desc">AWS infrastructure provisioned entirely with Terraform — VPC, security groups, ECS task definitions, IAM roles, and ALB. Reusable module structure, S3 remote state with DynamoDB locking, environment-specific workspaces. Reflects real IaC patterns used at work, built into a clean public reference.</div>
-      <div class="proj-stack">
-        <span class="chip">Terraform</span><span class="chip">AWS VPC</span>
-        <span class="chip">ECS</span><span class="chip">IAM</span>
-        <span class="chip">S3 State</span><span class="chip">DynamoDB Lock</span>
-      </div>
-      <div class="proj-footer">
-        <span style="font-size:10px;color:var(--amber);letter-spacing:.1em">IN PROGRESS</span>
-        <span class="proj-status" style="background:rgba(255,183,3,.07);border-color:rgba(255,183,3,.2);color:var(--amber)">BUILDING</span>
-      </div>
+      <div class="proj-stack"><span class="chip">Terraform</span><span class="chip">AWS VPC</span><span class="chip">ECS</span><span class="chip">IAM</span><span class="chip">S3 State</span><span class="chip">DynamoDB Lock</span></div>
+      <div class="proj-footer"><span style="font-size:10px;color:var(--amber);letter-spacing:.1em">IN PROGRESS</span><span class="proj-status" style="background:rgba(255,183,3,.07);border-color:rgba(255,183,3,.2);color:var(--amber)">BUILDING</span></div>
+    </div>
+
+    <div class="proj-card reveal" style="background:rgba(168,85,247,.015)">
+      <div class="proj-id">PROJECT_06 / FREELANCE</div>
+      <div class="proj-type" style="color:var(--purple)">Next.js &middot; CMS &middot; Infrastructure</div>
+      <div class="proj-name">Next.js + CMS — Full Web Setup</div>
+      <div class="proj-desc">Complete web infrastructure setup for a freelance client — Next.js frontend integrated with CMS, domain configuration, SSL certificate setup, and deployment pipeline. Delivered production-ready setup independently from initial configuration through live handoff.</div>
+      <div class="proj-stack"><span class="chip">Next.js</span><span class="chip">CMS</span><span class="chip">SSL/TLS</span><span class="chip">DNS</span><span class="chip">GCP</span></div>
+      <div class="proj-footer"><span style="font-size:10px;color:var(--purple);letter-spacing:.1em">FREELANCE &middot; CLIENT PROJECT</span><span class="proj-status" style="background:rgba(168,85,247,.08);border-color:rgba(168,85,247,.2);color:var(--purple)">DEPLOYED</span></div>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT — fixed: specific, no hype -->
 <section id="contact">
   <div class="contact-bg-text">HIRE</div>
-  <div class="contact-label">// get_in_touch()</div>
-  <div class="contact-title"><div>Open to</div><div class="dim">work.</div></div>
-  <p class="contact-sub">
+  <div class="contact-label" style="position:relative;z-index:2">// get_in_touch()</div>
+  <div class="contact-title" style="position:relative;z-index:2"><div>Open to</div><div class="dim">work.</div></div>
+  <p class="contact-sub" style="position:relative;z-index:2">
     Looking for DevOps, Cloud, and SRE roles in Pune, Mumbai, Bangalore, Hyderabad, or Chennai.
-    ~1 year of production experience — AWS, Docker, CI/CD, Prometheus, incident response.
-    Open to on-site, hybrid, or remote positions.
+    ~1 year of production experience — AWS, GCP, Docker, CI/CD, Prometheus, incident response.
+    Open to on-site, hybrid, or remote.
   </p>
-  <div class="contact-grid">
+  <div class="contact-grid" style="position:relative;z-index:2">
     <a href="mailto:poojasawant1030@gmail.com" class="c-link primary">&#9993; poojasawant1030@gmail.com</a>
     <a href="https://www.linkedin.com/in/pooja-sawant-3a030221b/" target="_blank" rel="noopener" class="c-link">LinkedIn &#8594;</a>
     <a href="https://github.com/Pooja1030" target="_blank" rel="noopener" class="c-link">GitHub &#8594;</a>
     <a href="tel:+919404882548" class="c-link">+91 94048 82548</a>
   </div>
   <div style="position:relative;z-index:2;font-size:10px;color:var(--muted);letter-spacing:.1em;margin-top:1rem">
-    B.Tech CSE B.Tech CSE &middot; DBATU 2024 &middot; Pune, Indiamiddot; DBATU 2024 B.Tech CSE &middot; DBATU 2024 &middot; Pune, Indiamiddot; Pune, India B.Tech CSE &middot; DBATU 2024 &middot; Pune, Indiamiddot; Open to Relocate
+    B.Tech CSE &middot; DBATU 2024 &middot; Pune, India &middot; Open to Relocate
   </div>
 </section>
 
 <footer>
-  <div class="footer-l">&#169; 2025 POOJA SAWANT &middot; DEVOPS &amp; CLOUD ENGINEER</div>
+  <div class="footer-l">&#169; 2026 POOJA SAWANT &middot; DEVOPS &amp; CLOUD ENGINEER</div>
   <div class="footer-r">STATUS: <span>OPEN TO WORK</span></div>
 </footer>
 
 <script>
-// LOADER
 (function(){
-  const loader=document.getElementById('page-loader'),
-        pct=document.getElementById('lpn'),
-        txt=document.getElementById('lpt');
+  const loader=document.getElementById('page-loader'),pct=document.getElementById('lpn'),txt=document.getElementById('lpt');
   const msgs=['BOOTING SYSTEMS','LOADING AWS STACK','CONNECTING PIPELINES','ALL SYSTEMS GO'];
   let n=0,i=0;
   const iv=setInterval(()=>{
-    n=Math.min(n+Math.random()*14,100);
-    pct.textContent=Math.round(n)+'%';
-    if(n>25&&i<1){txt.textContent=msgs[1];i=1}
-    if(n>55&&i<2){txt.textContent=msgs[2];i=2}
-    if(n>85&&i<3){txt.textContent=msgs[3];i=3}
-    if(n>=100){clearInterval(iv);setTimeout(()=>loader.classList.add('done'),280)}
+    n=Math.min(n+Math.random()*14,100);pct.textContent=Math.round(n)+'%';
+    if(n>25&&i<1){txt.textContent=msgs[1];i=1}if(n>55&&i<2){txt.textContent=msgs[2];i=2}
+    if(n>85&&i<3){txt.textContent=msgs[3];i=3}if(n>=100){clearInterval(iv);setTimeout(()=>loader.classList.add('done'),280)}
   },75);
 })();
-
-// CURSOR
 const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
@@ -585,17 +455,10 @@ document.querySelectorAll('a,button').forEach(el=>{
   el.addEventListener('mouseenter',()=>{ring.style.width='50px';ring.style.height='50px';ring.style.borderColor='var(--cyan)'});
   el.addEventListener('mouseleave',()=>{ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='rgba(0,210,255,.5)'});
 });
-
-// MAGNETIC
 document.querySelectorAll('.magnetic').forEach(btn=>{
-  btn.addEventListener('mousemove',e=>{
-    const r=btn.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;
-    btn.style.transform=`translate(${x*.14}px,${y*.14}px)`;
-  });
+  btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;btn.style.transform=`translate(${x*.14}px,${y*.14}px)`});
   btn.addEventListener('mouseleave',()=>btn.style.transform='');
 });
-
-// PARTICLES
 const canvas=document.getElementById('bg-canvas'),ctx=canvas.getContext('2d');
 let W,H,pts=[];
 function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight;init()}
@@ -616,23 +479,11 @@ function draw(){
   requestAnimationFrame(draw);
 }
 window.addEventListener('resize',resize);resize();draw();
-
-// COUNTERS
 function animCount(id,target,suffix,duration,dec){
   const el=document.getElementById(id),s=performance.now();
-  (function tick(now){
-    const p=Math.min((now-s)/duration,1),e=1-Math.pow(1-p,3),v=e*target;
-    el.textContent=(dec?v.toFixed(1):Math.round(v))+(suffix||'');
-    if(p<1)requestAnimationFrame(tick);
-  })(s);
+  (function tick(now){const p=Math.min((now-s)/duration,1),e=1-Math.pow(1-p,3),v=e*target;el.textContent=(dec?v.toFixed(1):Math.round(v))+(suffix||'');if(p<1)requestAnimationFrame(tick)})(s);
 }
-setTimeout(()=>{
-  animCount('cnt-apps',10,'+',1200);
-  animCount('cnt-uptime',99.9,'%',1500,true);
-  animCount('cnt-aws',10,'+',1000);
-},1900);
-
-// TERMINAL — realistic commands matching real stack
+setTimeout(()=>{animCount('cnt-apps',10,'+',1200);animCount('cnt-uptime',99.9,'%',1500,true);animCount('cnt-aws',12,'+',1000)},1900);
 const lines=[
   {p:'$',c:'aws ecs list-services --cluster prod-cluster',d:2000},
   {hi:'arn:aws:ecs:ap-south-1:...:service/client-app-prod',d:2260},
@@ -641,35 +492,31 @@ const lines=[
   {p:'$',c:'docker-compose -f monitoring/docker-compose.yml ps',d:3000},
   {ok:'prometheus     Up 3 days   0.0.0.0:9090',d:3230},
   {ok:'grafana        Up 3 days   0.0.0.0:3000',d:3350},
-  {ok:'node-exporter  Up 3 days',d:3460},
-  {ok:'cadvisor       Up 3 days',d:3570},
-  {p:'$',c:'curl -s localhost:9090/-/healthy',d:4000},
-  {ok:'Prometheus is Healthy.',d:4230},
-  {p:'$',c:'terraform plan -out=tfplan',d:4700},
-  {hi:'Plan: 2 to add, 1 to change, 0 to destroy.',d:4970},
-  {p:'$',c:'python3 scripts/lambda_deploy.py --env prod',d:5480},
-  {ok:'Lambda function updated successfully.',d:5720},
-  {p:'$',c:'uptime && free -h | grep Mem',d:6200},
+  {ok:'cadvisor       Up 3 days',d:3460},
+  {p:'$',c:'gcloud run services list --region=asia-south1',d:4000},
+  {ok:'ai-app-prod    asia-south1   https://ai-app-xxxx.run.app',d:4250},
+  {p:'$',c:'terraform plan -out=tfplan',d:4750},
+  {hi:'Plan: 2 to add, 1 to change, 0 to destroy.',d:5000},
+  {p:'$',c:'python3 scripts/lambda_deploy.py --env prod',d:5500},
+  {ok:'Lambda function updated successfully.',d:5730},
+  {p:'$',c:'uptime',d:6200},
   {o:'up 38 days, load avg: 0.08, 0.11, 0.09',d:6420},
-  {o:'Mem: 3.8G used  / 8.0G total',d:6550},
-  {p:'$',c:'echo $STATUS',d:6980},
-  {hi:'open-to-work',d:7180},
-  {p:'$',c:'',d:7550,cursor:true},
+  {p:'$',c:'echo $STATUS',d:6900},
+  {hi:'open-to-work',d:7100},
+  {p:'$',c:'',d:7450,cursor:true},
 ];
 const tbody=document.getElementById('terminal-body');
 lines.forEach(l=>{
   setTimeout(()=>{
     const row=document.createElement('div');row.className='t-line';
-    if(l.cursor)  row.innerHTML='<span class="p">$</span><span class="t-cursor"></span>';
-    else if(l.p)  row.innerHTML=`<span class="p">${l.p}</span><span class="c">${l.c}</span>`;
-    else if(l.ok) row.innerHTML=`<span class="ok">&#9679; ${l.ok}</span>`;
-    else if(l.hi) row.innerHTML=`<span class="hi">${l.hi}</span>`;
-    else          row.innerHTML=`<span class="o">${l.o}</span>`;
+    if(l.cursor) row.innerHTML='<span class="p">$</span><span class="t-cursor"></span>';
+    else if(l.p) row.innerHTML=`<span class="p">${l.p}</span><span class="c">${l.c}</span>`;
+    else if(l.ok)row.innerHTML=`<span class="ok">&#9679; ${l.ok}</span>`;
+    else if(l.hi)row.innerHTML=`<span class="hi">${l.hi}</span>`;
+    else         row.innerHTML=`<span class="o">${l.o}</span>`;
     tbody.appendChild(row);tbody.scrollTop=tbody.scrollHeight;
   },l.d);
 });
-
-// SCROLL REVEAL
 const obs=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{
     if(e.isIntersecting){
@@ -682,7 +529,6 @@ const obs=new IntersectionObserver(entries=>{
   });
 },{threshold:.1});
 document.querySelectorAll('.reveal,.skill-block').forEach(el=>obs.observe(el));
-
 const obs2=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{
     if(e.isIntersecting){
@@ -692,23 +538,13 @@ const obs2=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:.2});
-document.querySelectorAll('.status-item').forEach(el=>{
-  const f=el.querySelector('.si-fill');if(f)f.style.transform='scaleX(0)';
-  obs2.observe(el);
-});
-
-// SECTION TITLE SCRAMBLE
+document.querySelectorAll('.status-item').forEach(el=>{const f=el.querySelector('.si-fill');if(f)f.style.transform='scaleX(0)';obs2.observe(el)});
 document.querySelectorAll('.sec-title').forEach(el=>{
-  const orig=el.textContent,chars='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  let iv;
+  const orig=el.textContent,chars='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';let iv;
   el.addEventListener('mouseenter',()=>{
     let iter=0;clearInterval(iv);
     iv=setInterval(()=>{
-      el.textContent=orig.split('').map((c,i)=>{
-        if(c==='\n'||c===' ')return c;
-        if(i<iter)return orig[i];
-        return chars[Math.floor(Math.random()*chars.length)];
-      }).join('');
+      el.textContent=orig.split('').map((c,i)=>{if(c==='\n'||c===' ')return c;if(i<iter)return orig[i];return chars[Math.floor(Math.random()*chars.length)]}).join('');
       if(iter>=orig.length)clearInterval(iv);iter+=1.5;
     },38);
   });
@@ -717,3 +553,4 @@ document.querySelectorAll('.sec-title').forEach(el=>{
 </script>
 </body>
 </html>
+echo "Done - $(wc -c < /home/claude/portfolio_final.html) bytes"
